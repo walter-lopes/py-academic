@@ -46,10 +46,11 @@ class TestLinkedList(unittest.TestCase):
     def test_remove_last(self):
         linked_list = LinkedList()
         linked_list.insert_first(2)
+        linked_list.insert_first(5)
         linked_list.insert_first(3)
         linked_list.remove_last()
         self.assertEqual(linked_list.head.data, 3)
-        self.assertEqual(linked_list.tail.data, 3)
+        self.assertEqual(linked_list.tail.data, 5)
 
 
 if __name__ == '__main__':
